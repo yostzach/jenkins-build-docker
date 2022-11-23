@@ -2,7 +2,7 @@ FROM jenkins/agent:bullseye-jdk11
 USER root
 
 RUN apt-get update
-RUN apt-get install \
+RUN apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
@@ -17,6 +17,6 @@ RUN echo \
 
 RUN apt-get update
 
-RUN apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+RUN apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 USER jenkins
