@@ -1,4 +1,4 @@
-FROM docker pull jenkins/agent:bullseye-jdk11
+FROM jenkins/agent:bullseye-jdk11
 
 RUN sudo apt-get update
 RUN sudo apt-get install \
