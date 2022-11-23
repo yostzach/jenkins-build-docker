@@ -18,5 +18,7 @@ RUN echo \
 RUN apt-get update
 
 RUN apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
-
+RUN groupadd docker
+RUN usermod -aG docker jenkins
+RUN newgrp docker
 USER jenkins
