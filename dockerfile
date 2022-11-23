@@ -1,4 +1,5 @@
 FROM jenkins/agent:bullseye-jdk11
+USER root
 
 RUN apt-get update
 RUN apt-get install \
@@ -17,3 +18,5 @@ RUN echo \
 RUN apt-get update
 
 RUN apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+USER jenkins
