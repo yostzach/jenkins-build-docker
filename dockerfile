@@ -1,4 +1,4 @@
-FROM jenkins/agent:bullseye-jdk11
+FROM jenkins/agent:bookworm-jdk17
 USER root
 
 RUN apt-get update
